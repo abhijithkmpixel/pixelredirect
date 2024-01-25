@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const aspire = () => {
+  useEffect(() => {
+    // This effect runs on the client side after the component mounts
+    window.location.replace("https:pixelflames.com/portfolio/aspire"); // Replace with your desired URL
+  }, []);
   return (
     <div>aspire</div>
   )
@@ -8,11 +12,11 @@ const aspire = () => {
 
 export default aspire;
 
-export async function getServerSideProps(context) {
-    // Redirect to the specified URL
-    context.res.writeHead(301, { Location: 'https:pixelflames.com/portfolio/aspire' }); // Replace with your desired URL
-    context.res.end();
+// export async function getServerSideProps(context) {
+//     // Redirect to the specified URL
+//     context.res.writeHead(301, { Location: 'https:pixelflames.com/portfolio/aspire' }); // Replace with your desired URL
+//     context.res.end();
 
-    // Note: You can also return an object here with props if needed
-    return { props: {} };
-}
+//     // Note: You can also return an object here with props if needed
+//     return { props: {} };
+// }
